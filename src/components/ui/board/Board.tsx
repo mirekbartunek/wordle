@@ -55,7 +55,7 @@ export const Board = ({ word }: { word: string }) => {
       {words.map((row) => (
         <Row chars={row} key={uuidv4()} />
       ))}
-      <div className="mx-auto flex w-fit flex-col items-center rounded-lg border  border-solid border-black p-2 dark:border-white">
+      <div className="mx-auto flex w-fit flex-col items-center justify-center rounded-lg border  border-solid border-black p-2 dark:border-white">
         {process.env.NODE_ENV === "development" ? (
           <>
             <p>Row: {position.row}</p>
