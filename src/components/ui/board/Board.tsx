@@ -48,7 +48,10 @@ export const Board = ({ word }: { word: string }) => {
 
   return (
     <article className="flex flex-col">
-      <p className="dark:text-white">Word: {word}</p>
+      {process.env.NODE_ENV === "development" ? (
+        <p className="dark:text-white">Word: {word}</p>
+      ) : null}
+
       {words.map((row) => (
         <Row chars={row} key={uuidv4()} />
       ))}
